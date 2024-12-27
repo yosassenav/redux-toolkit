@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { increment } from './slices/counter';
+import { increment, decrement, incrementByAmount } from './slices/counter';
 import './App.css'
 
 
@@ -11,8 +11,15 @@ function App() {
   return (
     <>
       <div className="card">
-        <button onClick={()=>{dispatch(increment())}}>
-          count is {counter}
+        <p>count is {counter}</p>
+        <button onClick={()=>dispatch(increment())}>
+          Increment
+        </button>
+        <button onClick={()=>dispatch(decrement())}>
+          Decrement
+        </button>
+        <button onClick={()=>dispatch(increment())}>
+          Increment by 2
         </button>
       </div>
     </>
