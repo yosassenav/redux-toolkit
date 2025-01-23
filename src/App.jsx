@@ -18,7 +18,7 @@ function App() {
         <button onClick={()=>dispatch(decrement())}>
           Decrement
         </button>
-        <button onClick={()=>dispatch(increment())}>
+        <button onClick={()=>dispatch(incrementByAmount(2))}>
           Increment by 2
         </button>
       </div>
