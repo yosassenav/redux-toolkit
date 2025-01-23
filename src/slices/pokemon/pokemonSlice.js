@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const pokemonSlice = createSlice({
   //nombre del slice con el que se vincula al store
-  name: 'name',
+  name: 'pokemon',
   //declaracion del estado inicial de las variables
   initialState: {
     page: 0,
@@ -11,17 +11,13 @@ export const pokemonSlice = createSlice({
   },
      //funciones que modifican el estado
   reducers: {
-    increment: (state) => {
-      state.counter += 1;
+    startLoadingPokemons: (state) => {
+      state.loading = true;
     },
-    decrement: (state) => {
-      state.counter -= 1;
-    },
-         //incremeta por una cantidad dada
-    incrementByAmount: (state, action) => {
-      state.counter += action.payload;
-    },
+    setPokemons: (state, actions) => {
+      console.log(actions)
+    }
   },
 });
 
-export const { increment, decrement, incrementByAmount } = pokemonSlice.actions;
+export const { startLoadingPokemons, setPokemons } = pokemonSlice.actions;
