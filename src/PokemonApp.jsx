@@ -16,7 +16,7 @@ export const PokemonApp = () => {
   useEffect(()=>{
     // calling the thunk: getPokemons
     dispatch(getPokemons(0));
-  },[dispatch, page])
+  },[dispatch])
 
   return (
     <>
