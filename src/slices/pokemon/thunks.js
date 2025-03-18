@@ -5,8 +5,8 @@ import { setPokemons } from "./index"
 
 export const getPokemons = (page = 0) => {
     /**
-     * This thunk returns an async function with two
-     * arguments which are functions too
+     * A thunk is an asyncronous action that triggers
+     * other actions when an async request is resolved
      */
     return async(dispatch, getState) => {
         /**calling the reducers that are declared in

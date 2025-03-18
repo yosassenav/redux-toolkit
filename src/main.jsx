@@ -5,6 +5,7 @@ import {store} from './store'
 import { PokemonApp } from './PokemonApp.jsx'
 //import App from './App.jsx'
 import './index.css'
+import { TodoApp } from './TodoApp.jsx'
 
 
 
@@ -13,7 +14,8 @@ createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <StrictMode>
       {/*<App />*/}
-      <PokemonApp/>
+      {/*<PokemonApp/>*/}
+      <TodoApp/>
     </StrictMode>                   
   </Provider>,
 )
